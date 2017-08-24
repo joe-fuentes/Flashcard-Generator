@@ -21,11 +21,11 @@ console.log(firstPresident.back);
 var firstPresidentCloze = ClozeCard(
     "George Washington was the first president of the United States.", "George Washington");
 
+console.log("These next few lines are just examples.");
 // "George Washington"
 console.log(firstPresidentCloze.cloze); 
 
 // " ... was the first president of the United States.
-clozeDeleted();
 console.log(firstPresidentCloze.partial);
 
 // "George Washington was the first president of the United States.
