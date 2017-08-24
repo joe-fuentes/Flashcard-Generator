@@ -9,7 +9,7 @@ var drawnCard;
 var playedCard;
 var count = 0;
 
-var firstPresident = new BasicCard(
+var firstPresident = BasicCard(
     "Who was the first president of the United States?", "George Washington");
 
 // "Who was the first president of the United States?"
@@ -18,20 +18,21 @@ console.log(firstPresident.front);
 // "George Washington"
 console.log(firstPresident.back); 
 
-var firstPresidentCloze = new ClozeCard(
+var firstPresidentCloze = ClozeCard(
     "George Washington was the first president of the United States.", "George Washington");
 
 // "George Washington"
 console.log(firstPresidentCloze.cloze); 
 
 // " ... was the first president of the United States.
+clozeDeleted();
 console.log(firstPresidentCloze.partial);
 
 // "George Washington was the first president of the United States.
 console.log(firstPresidentCloze.fullText);
 
 // Should throw or log an error because "oops" doesn't appear in "This doesn't work"
-var brokenCloze = new ClozeCard("This doesn't work", "oops");
+var brokenCloze = ClozeCard("This doesn't work", "oops");
 console.log(brokenCloze.partial);
 
 //initially give option to the user to Create new flashcards or use exiting ones.
@@ -198,10 +199,10 @@ function createCard() {
 //function used to get the question from the drawnCard in the askQuestions function
 function getQuestion(card) {
     if (card.type === "BasicCard") {						//If the cards type is "BasicCard" then....
-        drawnCard = new BasicCard(card.front, card.back);	//drawnCard becomes a new instance of BasicCard constuctor with its front and back passed in
+        drawnCard = BasicCard(card.front, card.back);	//drawnCard becomes a new instance of BasicCard constuctor with its front and back passed in
         return drawnCard.front;								//Return the front of the card (the questions side)
     } else if (card.type === "ClozeCard") {					//If the card type is "Cloze Card" then...
-        drawnCard = new ClozeCard(card.fullText, card.cloze)	//drawnCard becomes a new instance of ClozeCard constuctor with its fullText and cloze passed in
+        drawnCard = ClozeCard(card.fullText, card.cloze)	//drawnCard becomes a new instance of ClozeCard constuctor with its fullText and cloze passed in
         return drawnCard.clozeDeleted();					//Return the ClozeCard prototpe method clozeDeleted to show the question missing the cloze
     }
 };
