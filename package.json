@@ -1,0 +1,27 @@
+{
+  "name": "flashcard-generator",
+  "version": "1.0.0",
+  "description": "A basic flashcard application",
+  "main": "flash-a-card.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joe-fuentes/Flashcard-Generator.git"
+  },
+  "keywords": [
+    "flashcards"
+  ],
+  "author": "Joe Fuentes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joe-fuentes/Flashcard-Generator/issues"
+  },
+  "homepage": "https://github.com/joe-fuentes/Flashcard-Generator#readme",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "inquirer": "^3.2.2",
+    "require": "^2.4.20"
+  }
+}
