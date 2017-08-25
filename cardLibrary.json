@@ -1,11 +1,6 @@
 [
   {
     "type": "ClozeCard",
-    "fullText": "George Washington was the first president of the United States.",
-    "cloze": "president"
-  },
-  {
-    "type": "ClozeCard",
     "fullText": "Benjamin Franklin was an American patriot, writer, printer, and inventor. During the Revolutionary War he persuaded the French to help the colonists.",
     "cloze": "Benjamin Franklin"
   },
@@ -16,33 +11,23 @@
   },
   {
     "type": "ClozeCard",
-    "fullText": "Mary Poppins was a Disney movie.",
-    "cloze": "Disney"
-  },
-  {
-    "type": "ClozeCard",
-    "fullText": "The United States was founded in the year 1776.",
-    "cloze": "1776"
-  },
-  {
-    "type": "ClozeCard",
     "fullText": "George Washington was the first president of the United States.",
     "cloze": "George Washington"
   },
   {
+    "type": "BasicCard",
+    "front": "Who was the first president of the United States?",
+    "back": "George Washington"
+  },
+  {
     "type": "ClozeCard",
-    "fullText": "President of the Continental Congress, John Hancock was first to sign the Declaration of Independence.",
-    "cloze": "John Hancock"
+    "fullText": "Albert Einstein was credited for the theory of relativity.",
+    "cloze": "Albert Einstein"
   },
   {
     "type": "BasicCard",
     "front": "A tax that the British Pariliament placed on newspapers and official documents sold in the American Colonies.",
     "back": "Stamp Act"
-  },
-  {
-    "type": "ClozeCard",
-    "fullText": "One of the events that lead to the Revolutionary War was the Boston Massacre where 5 colonists were killed by British soldiers.",
-    "cloze": "Boston Massacre"
   },
   {
     "type": "BasicCard",
@@ -55,9 +40,19 @@
     "back": "Loyalist"
   },
   {
+    "type": "ClozeCard",
+    "fullText": "The first physicist, Isaac Newton, is remembered as the man who saw an apple fall from a tree.",
+    "cloze": "Isaac Newton"
+  },
+  {
+    "type": "ClozeCard",
+    "fullText": "Mary Poppins was a Disney movie.",
+    "cloze": "Disney"
+  },
+  {
     "type": "BasicCard",
-    "front": "Who was the first president of the United States?",
-    "back": "George Washington"
+    "front": "Who created the Magna Carta in 1215?",
+    "back": "King John I of England"
   },
   {
     "type": "BasicCard",
@@ -66,12 +61,22 @@
   },
   {
     "type": "ClozeCard",
-    "fullText": "The first physicist, Isaac Newton, is remembered as the man who saw an apple fall from a tree.",
-    "cloze": "Isaac Newton"
+    "fullText": "George Washington was the first president of the United States.",
+    "cloze": "president"
   },
   {
     "type": "ClozeCard",
-    "fullText": "Albert Einstein was credited for the theory of relativity.",
-    "cloze": "Albert Einstein"
+    "fullText": "The United States was founded in the year 1776.",
+    "cloze": "1776"
+  },
+  {
+    "type": "ClozeCard",
+    "fullText": "President of the Continental Congress, John Hancock was first to sign the Declaration of Independence.",
+    "cloze": "John Hancock"
+  },
+  {
+    "type": "ClozeCard",
+    "fullText": "One of the events that lead to the Revolutionary War was the Boston Massacre where 5 colonists were killed by British soldiers.",
+    "cloze": "Boston Massacre"
   }
 ]

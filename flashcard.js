@@ -9,32 +9,34 @@ var drawnCard;
 var playedCard;
 var count = 0;
 
+// BasicCard example
 var firstPresident = BasicCard(
     "Who was the first president of the United States?", "George Washington");
 
+console.log("These next few lines are just examples.\n");
 // "Who was the first president of the United States?"
 console.log(firstPresident.front); 
 
 // "George Washington"
 console.log(firstPresident.back); 
 
+//CloseCard example
 var firstPresidentCloze = ClozeCard(
     "George Washington was the first president of the United States.", "George Washington");
 
-console.log("These next few lines are just examples.");
+// "George Washington was the first president of the United States.
+console.log(firstPresidentCloze.fullText);
+
 // "George Washington"
 console.log(firstPresidentCloze.cloze); 
 
 // " ... was the first president of the United States.
 console.log(firstPresidentCloze.partial);
 
-// "George Washington was the first president of the United States.
-console.log(firstPresidentCloze.fullText);
-
 // Should throw or log an error because "oops" doesn't appear in "This doesn't work"
 var brokenCloze = ClozeCard("This doesn't work", "oops");
 console.log(brokenCloze.partial);
-
+console.log("\n\nNext is my application that incorporates the use of constructors in flashcard.js\n\n");
 //initially give option to the user to Create new flashcards or use exiting ones.
 function openMenu() {
   inquirer.prompt([															//use inquirer to ask question
