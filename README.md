@@ -28,7 +28,7 @@ This flash card has three parts:
 
 ## Instructions
 
-From the GitBash command (at the folder of your choosing) enter...\n
+From the GitBash command (at the folder of your choosing) enter...<br>
 $ npm init
 
 Then add into the dependencies of the package.json file the following:\n
