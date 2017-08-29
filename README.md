@@ -57,11 +57,11 @@ $ node flashcard.js
 at the command prompt, a menu will pop-up. This menu will list as such:
 
 \> Create<br>
-   Use All<br>
-   Random<br>
-   Shuffle<br>
-   Show All<br>
-   Exit
+&nbsp;&nbsp;Use All<br>
+&nbsp;&nbsp;Random<br>
+&nbsp;&nbsp;Shuffle<br>
+&nbsp;&nbsp;Show All<br>
+&nbsp;&nbsp;Exit
 
 **Create** - will allow the user to create a basic (front & back) or Cloze (text & cloze) flashcard and add it to the deck.
 
