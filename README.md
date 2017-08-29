@@ -1,14 +1,12 @@
 # Advanced JavaScript Assignment: Cloze Constructors
 
-### Overview
+### Featuring: A Basic Flashcard Application.
 
-In this week's assignment, you will create the backend for a basic flashcard application.
+The backend constitutes an API that allows users to create two types of flashcards.
 
-The backend will essentially constitute an API that allows users to create two types of flashcards.
+1. **Basic** flashcards, have a front (_"Who was the first president of the United States?"_), and a back (_"George Washington"_).
 
-1. **Basic** flashcards, which have a front (_"Who was the first president of the United States?"_), and a back (_"George Washington"_).
-
-2. **Cloze-Deleted** flashcards, which present _partial_ text (_"... was the first president of the United States."_), and the full text when the user requests it (_"George Washington was the first president of the United States."_)
+2. **Cloze-Deleted** flashcards, present _partial_ text (_"... was the first president of the United States."_), and the full text when the user requests it (_"George Washington was the first president of the United States."_)
 
 #### Cloze Deletions
 
@@ -20,9 +18,7 @@ _"George Washington was the first president of the United States."_
 
 _"... was the first president of the United States."_
 
-This is useful for building flash card applications that forces users to remember the important part of a sentence, and is [a common device in educational applications](https://en.wikipedia.org/wiki/Cloze_test).
-
-A flash card built this way has three parts:
+This flash card has three parts:
 
 1. The **full text**. This is the entire sentence users need to remember:  _"George Washington was the first president of the United States."_
 
@@ -30,80 +26,53 @@ A flash card built this way has three parts:
 
 3. The **partial text**. This is what we get if we remove the **cloze deletion** from the **full text**: _"... was the first president of the United States._
 
-See below for examples as to how your constructor should behave.
-
 ## Instructions
 
-* Create a new GitHub repository, named `Flashcard-Generator` or something similar. Clone this to your local drive.
+From the GitBash command (at the folder of your choosing) enter...
+$ npm init
 
-* Create a new file named `BasicCard.js`:
+Then add into the dependencies of the package.json file the following:
+    "colors": "^1.1.2",
+    "inquirer": "^3.2.2",
+    "require": "^2.4.20"
 
-  * This file should define a Node module that exports a constructor for creating basic flashcards, e.g.:
-    `module.exports = BasicCard;`
+By typing these commands at the command prompt...
+$ npm install require --save
+$ npm install inquirer --save
+$ npm install colors --save
 
-  * The constructor should accept two arguments: `front` and `back`.
+--> The colors package is optional.
 
-  * The constructed object should have a `front` property that contains the text on the front of the card.
+Then the following javascript files were created:
+    BasicCard.js
+    ClozeCard.js
+    flashcard.js
 
-  * The constructed object should have a `back` property that contains the text on the back of the card.
+Both the BasicCard.js and ClozeCard.js hold the constructors of our flashcard.js
 
-* Create a new file named `ClozeCard.js`:
+So when the application is run, by typing...
 
-  * This file should define a Node module that exports a constructor for creating cloze-deletion flashcards, e.g.:
-    `module.exports = ClozeCard;`
+$ node flashcard.js
 
-  * The constructor should accept two arguments: `text` and `cloze`.
+at the command prompt, a menu will pop-up. This menu will list as such:
 
-  * The constructed object should have a `cloze` property that contains _only_ the cloze-deleted portion of the text.
+> Create
+  Use All
+  Random
+  Shuffle
+  Show All
+  Exit
 
-  * The constructed object should have a `partial` property that contains _only_ the partial text.
+Create - will allow the user to create a basic (front & back) or Cloze (text & cloze) flashcard and add it to the deck.
 
-  * The constructed object should have a `fullText` property that contains _only_ the full text.
+Use All - will run the user through all the flashcards in their current order, giving questions and asking for the answers, giving correct or incorrect responses.
 
-  * The constructor should throw or log an error when the cloze deletion does _not_ appear in the input text.
+Random - will randomly pick one card from the existing deck.
 
-  * Use prototypes to attach these methods, wherever possible.
+Shuffle - will randomly mix up the order of all cards in the deck.
 
-The bulk of this assignment is implementing `ClozeCard`. If you build a robust `ClozeCard` implementation, feel free to try your hand at implementing a front-end, as well.
+Show All - will list all cards currently in the deck, in their current order, to the screen for the user to review.
 
-### Examples
+Exit - will take the user out of the application and back to their command prompt.
 
-Your constructors should work as follows.
-
-```
-var firstPresident = new BasicCard(
-    "Who was the first president of the United States?", "George Washington");
-
-// "Who was the first president of the United States?"
-console.log(firstPresident.front); 
-
-// "George Washington"
-console.log(firstPresident.back); 
-
-var firstPresidentCloze = new ClozeCard(
-    "George Washington was the first president of the United States.", "George Washington");
-
-// "George Washington"
-console.log(firstPresidentCloze.cloze); 
-
-// " ... was the first president of the United States.
-console.log(firstPresidentCloze.partial); "
-
-// "George Washington was the first president of the United States.
-console.log(firstPresidentCloze.fullText): "
-
-// Should throw or log an error because "oops" doesn't appear in "This doesn't work"
-var brokenCloze = new ClozeCard("This doesn't work", "oops");
-```
-
-### Bonuses
-
-* Write your constructors such that users can call them with or without the `new` keyword. 
-
-  * Look up scope-safe constructors, and try to implement them. It takes only two additional lines of code.
-
-- - -
-
-### Minimum Requirements
-
-Attempt to complete homework assignment as described in instructions. If unable to complete certain portions, please pseudocode these portions to describe what remains to be completed.
+All the cards that are created will be stored in a file (deck) named "cardLibrary.json"
