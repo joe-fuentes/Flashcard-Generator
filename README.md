@@ -31,21 +31,21 @@ This flash card has three parts:
 From the GitBash command (at the folder of your choosing) enter...<br>
 $ npm init
 
-Then add into the dependencies of the package.json file the following:\n
-    "colors": "^1.1.2",\n
-    "inquirer": "^3.2.2",\n
+Then add into the dependencies of the package.json file the following:<br>
+    "colors": "^1.1.2",<br>
+    "inquirer": "^3.2.2",<br>
     "require": "^2.4.20"
 
-By typing these commands at the command prompt...\n
-$ npm install require --save\n
-$ npm install inquirer --save\n
+By typing these commands at the command prompt...<br>
+$ npm install require --save<br>
+$ npm install inquirer --save<br>
 $ npm install colors --save
 
 --> The colors package is optional.
 
-Then the following javascript files were created:\n
-    BasicCard.js\n
-    ClozeCard.js\n
+Then the following javascript files were created:<br>
+    BasicCard.js<br>
+    ClozeCard.js<br>
     flashcard.js
 
 Both the BasicCard.js and ClozeCard.js hold the constructors of our flashcard.js
@@ -56,11 +56,11 @@ $ node flashcard.js
 
 at the command prompt, a menu will pop-up. This menu will list as such:
 
-\> Create\n
-  Use All\n
-  Random\n
-  Shuffle\n
-  Show All\n
+\> Create<br>
+  Use All<br>
+  Random<br>
+  Shuffle<br>
+  Show All<br>
   Exit
 
 **Create** - will allow the user to create a basic (front & back) or Cloze (text & cloze) flashcard and add it to the deck.
